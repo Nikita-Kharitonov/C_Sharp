@@ -1,0 +1,82 @@
+// Задача 19. Напишите программу, которая принимает на вход целое число любой разрядности и проверяет, 
+//является ли оно палиндромом.
+
+// Console.WriteLine("Введите целое число любой разрядности:");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int b;
+// int q = 0;
+// int c = a;
+// if (a < 10 && a > -10) Console.WriteLine("Вы ввели однозначное число");
+// else
+// {
+//    while (a != 0) //делаем переворот числа
+//    {
+//    b = a % 10;        
+//    q = (q * 10) + b;   
+//    a = a / 10;             
+//    }
+//
+//    if (q == c) Console.WriteLine($"Введенное число {c} является палиндромом");
+//    else
+//    {
+//        Console.WriteLine($"Введенное число {c} не является палиндромом");
+//    }
+//}
+//Console.WriteLine();
+
+
+// Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между
+// ними в N-мерном пространстве. Сначала задается N с клавиатуры, потом задаются координаты точек.
+
+//Console.Write("Введите размерность пространства: ");
+//int n = Convert.ToInt32(Console.ReadLine());
+//if (n < 1) Console.WriteLine("Введите целое положительное число");
+//else
+//{
+//double[] x = new double[n];
+//double[] y = new double[n];
+//double square = 0;
+//
+//try
+//{
+//    for(int i = 0; i < n; i++)
+//    {
+//        Console.WriteLine($"Введите координаты точки А[{i+1}] ");
+//        x[i] = Convert.ToDouble(Console.ReadLine()); 
+//    }
+//    for(int i = 0; i < n; i++)
+//    {
+//        Console.WriteLine($"Введите координаты точки B[{i+1}] ");
+//        y[i] = Convert.ToDouble(Console.ReadLine());  
+//    }
+//    for (int i = 0; i < n; i++)
+//    {
+//        square = square + Math.Pow((x[i]-y[i]), 2);
+//    }
+//    double distance = Math.Round(Math.Sqrt(square), 2);
+//    Console.WriteLine($"Расстояние между введенными точками составляет: {distance}");
+//}
+//catch
+//{
+//    Console.WriteLine("Проверьте правильность ввода данных");
+//}
+//    Console.WriteLine();
+//}
+
+
+//Задача 23. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел 
+//от 1 до N.
+
+Console.WriteLine("Напишите целое положительное число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n <= 0) Console.WriteLine("Вы ввели отрицательное число или 0");
+else
+{
+Console.WriteLine($"Кубы чисел от 1 до {n} равны: ");    
+for (int i = 1; i <= n; i++)
+{
+    Console.Write($"{Math.Pow(i, 3)} ");
+}
+}
+Console.WriteLine();
