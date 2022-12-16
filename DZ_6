@@ -1,0 +1,50 @@
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, 
+//сколько чисел больше 0 ввёл пользователь.
+
+// void fillarray(int[] a)
+// {
+//     Console.WriteLine("Введите числа через Enter");
+//     for (int i = 0; i < a.Length; i++)
+//         a[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// void CheckArray(int[] a)
+// {
+//     int count = 0;
+//     for (int i = 0; i < a.Length; i++)
+//     {
+//         if (a[i] > 0)
+//             count++;
+//     }
+//     Console.WriteLine($"Колличество чисел больше нуля {count}");
+// }
+// Console.WriteLine("Введите количество чисел");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[num];
+// fillarray(array);
+// CheckArray(array);
+
+
+
+
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями
+// y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+void CrossPoint(int k1, int b1, int k2, int b2)
+{
+    if (k1 == k2)
+    {
+        Console.WriteLine("Прямые не пересекаются");
+        return;
+    }
+    int x = (b2 - b1) / (k1 - k2);
+    int y = (k1 * (b2 - b1)) / (k1 - k2) + b1;
+    Console.WriteLine($"Координаты точки пересечения прямых ({x}, {y})");
+}
+
+Console.WriteLine("Введите значение для первого уравнения");
+int k1 = Convert.ToInt32(Console.ReadLine());
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите значение для второго уравнения");
+int k2 = Convert.ToInt32(Console.ReadLine());
+int b2 = Convert.ToInt32(Console.ReadLine());
+CrossPoint(k1, b1, k2, b2);
